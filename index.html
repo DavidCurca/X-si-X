@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+             google_ad_client: "ca-pub-8713196903791104",
+             enable_page_level_ads: true
+            });
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <title>X Și X</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="top">
+            <button onclick="back();" style="background-color: blue; float: right;"><h3><= Back</h3></button>
+            <center>
+                <h1>X Și X</h1>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;See code on <a href="">Github</a></p>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;By Curcă David and</p>
+                <p>&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;Rareș Ocoleanu</p>
+            </center>
+        </div>
+        <br>
+        <div id="menu" style="display: block">
+            <center>
+                <button onclick="single();" style="width: 500px; background-color: chartreuse;"><h3>Singleplayer</h1></button><br>
+                --------------------------------------------------------------<br>
+                <button onclick="contra();" style="width: 500px; background-color: gray;"><h3>Player Vs Computer</h3></button><br>
+                --------------------------------------------------------------<br>
+                <button onclick="multi(); load();" style="width: 500px; background-color: red;"><h3>Multiplayer</h1></button><br>
+                --------------------------------------------------------------<br>
+                <a href="inst.html"><button onclick="leader();" style="width: 500px; background-color: blue;"><h3>Instructions</h1></button></a><br>
+                --------------------------------------------------------------<br>
+                <a href="tactics.html"><button onclick="tactic();" style="width: 500px; background-color: yellow;"><h3>Tactics</h1></button><br></a>
+                --------------------------------------------------------------<br>
+                <a href="comments.html"><button onclick="comment();" style="width: 500px; background-color: purple;"><h3>Comments</h3></button></a><br>
+                --------------------------------------------------------------<br>
+                <button onclick="skins();" style="width: 500px; background-color: darkorange; "><h3>Skins</h3></button>
+            </center>
+        </div>
+        <center>
+            <div id="skins" style="display: none">
+                <h1>Color :
+                <select id="color">
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                </select><br>
+                Skin :
+                <select id="image">
+                    <option value="default">Default X</option>
+                    <option value="star">Star X</option>
+                    <option value="mega-star">Mega-Star X</option>
+                    <option value="israel">Israel-Star X</option>
+                    <option value="fulg">Fulg X</option>
+                </select><br>
+                <button onclick="change();"><h1>Save Changes</h1></button>
+                <button onclick="exit_skin();"><h1>Back</h1></button></h1>
+                <img id="blue" src="images/X/blue.png"><img id="red" src="images/X/red.png">
+            </div>
+        </center>
+        <div id="board" style="display: none">
+            <center>
+                <h1 id="won" style="display: none;">Won</h1>
+                <br><button onclick="reset();" style="background-color: yellow; width: 905px"><h1>RESET</h1></button><br>
+                ----------------------------------------------------------------------------------------------------------------------<br>
+                <button id="1" onclick="block(this.id);"><img id="pic1" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="2"><img id="pic2" src="images/X/blank.png"></img></button> <img  src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="3"><img id="pic3" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="4"><img id="pic4" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="5"><img id="pic5" src="images/X/blank.png"></img></button><br>
+                <img src="images/Board/long.png" alt=""></img><br>
+                <button onclick="block(this.id);" id="6"><img id="pic6" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="7"><img id="pic7" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="8"><img id="pic8" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="9"><img id="pic9" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="10"><img id="pic10" src="images/X/blank.png"></img></button><br>
+                <img src="images/Board/long.png" alt=""></img><br>
+                <button onclick="block(this.id);" id="11"><img id="pic11" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="12"><img id="pic12" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="13"><img id="pic13" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="14"><img id="pic14" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="15"><img id="pic15" src="images/X/blank.png"></img></button><br>
+                <img src="images/Board/long.png" alt=""></img><br>
+                <button onclick="block(this.id);" id="16"><img id="pic16" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="17"><img id="pic17"src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="18"><img id="pic18" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="19"><img id="pic19" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="20"><img id="pic20" src="images/X/blank.png"></img></button><br>
+                <img src="images/Board/long.png" alt=""></img><br>
+                <button onclick="block(this.id);" id="21"><img id="pic21" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="22"><img id="pic22" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="23"><img id="pic23" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="24"><img id="pic24" src="images/X/blank.png"></img></button> <img src="images/Board/UP.png" alt=""></img> <button onclick="block(this.id);" id="25"><img id="pic25" src="images/X/blank.png"></img></button><br>            </center>
+                <center><h1 id="turn-text">Turn : </h1><h1 id="turn"> Blue </h1></center>
+            </center>
+        </div>
+        <center>
+            <p>Copyright © 2019 CodeBye SRL. All rights reserved. <u>Terms of Use</u> |  <u>Privacy Policy - REVISED</u></p>
+        </center>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyBvq9txriWIUQoI24gnJ3kmDUwBqh5NWt8",
+                authDomain: "board-6271b.firebaseapp.com",
+                databaseURL: "https://board-6271b.firebaseio.com",
+                projectId: "board-6271b",
+                storageBucket: "",
+                messagingSenderId: "393234154210",
+                appId: "1:393234154210:web:de61703a872c1c32"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>

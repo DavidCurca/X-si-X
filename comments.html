@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>X Și X - Comments</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="top">
+            <a href="index.html"><button style="background-color: blue; float: right;"><h3><= Back</h3></button></a>
+            <center>
+                <h1>X Și X - Comments</h1>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;See code on <a href="">Github</a></p>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;By Curcă David and</p>
+                <p>&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;Rareș Ocoleanu</p>
+            </center>
+        </div>
+        <div id="center">
+            <center>
+                <label for="name">What is your name? :</label>
+                <input id="name" placeholder="Please Enter Text Here!" type="text"></input><br>
+                <label for="content">What is your Comment? :</label>
+                <textarea placeholder="Please Enter Text Here!" id="main-text" style="width: 500px; height: 100px;" type="text" id ="content" name="content"></textarea><br>
+                <button onclick="comment();" id="submit">💨 Send Comment</button>
+            </center>
+        </div>
+        <center>
+            Comments<br>
+            ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            <div id = "comment">
+
+            </div>
+        </center>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyAogwFClcuraITN_jtZyxsxaCDNh0ytWMU",
+              authDomain: "test-4c6d8.firebaseapp.com",
+              databaseURL: "https://test-4c6d8.firebaseio.com",
+              projectId: "test-4c6d8",
+              storageBucket: "",
+              messagingSenderId: "39852221152",
+              appId: "1:39852221152:web:28896df541891e5a"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            var div = document.getElementById("comment");
+            firebase.database().ref().on('value', (snapshot) => {
+                snapshot.forEach((child) => {
+                console.log(child.val());
+                    var text = document.createElement("h2");
+                    text.innerHTML = child.val();
+                    div.appendChild(text);
+                });
+            });
+            function comment(){
+                document.location.reload()
+                var mainText = document.getElementById("main-text").value;
+                var nume = document.getElementById("name").value;
+                mainText += " - " +  nume;
+                console.log(mainText);
+                
+
+                var firebaseRef = firebase.database().ref(); 
+                firebaseRef.push().set(mainText);
+                
+                firebase.database().ref().on('value', (snapshot) => {
+                    snapshot.forEach((child) => {
+                    console.log(child.val());
+                        var text = document.createElement("h2");
+                        text.innerHTML = child.val();
+                        div.appendChild(text);
+                    });
+                });
+            }
+          </script>
+    </body>
+</html>
